@@ -583,13 +583,15 @@
 
   .pull-quote blockquote {
     font-family: var(--serif);
-    font-size: clamp(24px, 3vw, 38px);
+    font-size: clamp(20px, 2.4vw, 32px);
     font-style: italic;
-    line-height: 1.35;
+    line-height: 1.4;
     color: var(--ink);
     border-left: 3px solid var(--accent);
     padding-left: 32px;
-    max-width: 800px;
+    max-width: 760px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   .pull-quote cite {
@@ -616,6 +618,7 @@
     #connect { grid-template-columns: 1fr; }
     .project-card { grid-template-columns: 48px 1fr; }
     .project-right { display: none; }
+    .pull-quote blockquote { font-size: clamp(18px, 3.5vw, 28px); }
   }
 
   @media (max-width: 600px) {
@@ -625,6 +628,18 @@
     #skills { padding-left: 20px; padding-right: 20px; }
     footer { padding: 20px; }
     .skills-grid { grid-template-columns: 1fr; }
+    .pull-quote blockquote { font-size: clamp(16px, 4.5vw, 22px); padding-left: 20px; }
+    .pull-quote cite { padding-left: 23px; }
+    .pull-quote p { padding-left: 23px !important; }
+    .hero-headline { font-size: clamp(40px, 10vw, 60px); }
+    .connect-headline { font-size: clamp(36px, 8vw, 52px); }
+    .project-card { padding: 24px 20px; }
+    .project-title { font-size: 18px; }
+  }
+
+  @media (max-width: 380px) {
+    .pull-quote blockquote { font-size: 16px; }
+    .masthead-issue { display: none; }
   }
 </style>
 </head>
@@ -684,8 +699,8 @@
 <!-- PULL QUOTE -->
 <div class="pull-quote">
   <blockquote>
-    &#8220;아직 적히지 않은 페이지를 읽어내는 것이 우리의 일이다.&#8221;<br>
-    <span style="font-size:0.62em;letter-spacing:0.18em;color:var(--ink-muted)">Our task is to read things that are not yet on the page.</span>
+    &#8220;아직 적히지 않은 페이지를 읽어내는 것이<br>우리의 일이다.&#8221;<br>
+    <span style="font-size:0.55em;letter-spacing:0.14em;color:var(--ink-muted);font-style:normal;display:block;margin-top:10px;">Our task is to read things that are not yet on the page.</span>
   </blockquote>
   <cite>— 움베르트 에코 (Umberto Eco)</cite>
   <p style="margin-top:28px;font-size:13px;line-height:1.85;color:var(--ink-muted);max-width:640px;padding-left:35px;">
